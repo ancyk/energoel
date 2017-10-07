@@ -124,7 +124,7 @@ table {
 
 body,
 html {
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 10px; }
 
 header {
@@ -133,60 +133,126 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  color: white; }
+  color: #FFF; }
   header #arrow {
     position: absolute;
     bottom: 1.5rem;
     left: 50%;
     width: 40px;
     height: 40px;
-    border: 3px solid white;
+    border: 3px solid #FFF;
     border-radius: 100%;
     font-size: 3.8rem;
     text-align: center;
     transform: translateX(-50%);
     overflow-y: hidden;
-    text-shadow: 0 -12px 0 white, 0 -24px 0 white;
+    text-shadow: 0 -12px 0 #FFF, 0 -24px 0 #FFF;
     box-shadow: 1px 1px 5px black;
     background-color: rgba(0, 0, 0, 0.35); }
   header .fa-angle-down {
     animation: arrow 1.6s infinite linear; }
   header .text-header {
-    margin: 16% 3rem;
+    position: absolute;
+    top: 30%;
+    padding: 0 2rem;
     text-shadow: 1px 1px 5px black;
-    font-family: "Righteous", cursive;
     text-align: center; }
     header .text-header h1 {
-      font-size: 4rem; }
+      font-size: 4rem;
+      font-family: "Alfa Slab One", cursive; }
     header .text-header h3 {
       font-size: 1.5rem;
       margin-top: 1.2rem;
-      line-height: 1.8rem; }
-
-.navbar {
-  position: relative;
-  height: 10vh; }
-  .navbar img {
-    max-height: 4rem;
-    max-width: 50%;
-    position: absolute;
-    top: 1vh;
-    left: 1vh;
-    filter: drop-shadow(1px 1px 2px #000); }
-  .navbar #menu-bar {
-    position: absolute;
-    top: .8rem;
-    right: 1.3rem;
-    font-size: 3rem;
-    text-shadow: 1px 1px 5px black; }
-  .navbar nav {
-    display: none; }
+      line-height: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: .1rem;
+      word-spacing: .2rem; }
+  header .navbar {
+    height: 10vh; }
+    header .navbar img {
+      max-height: 4.5rem;
+      max-width: 50%;
+      position: absolute;
+      top: 2vh;
+      left: 2vh;
+      filter: drop-shadow(1px 1px 2px #000); }
+    header .navbar #menu-bar {
+      position: absolute;
+      top: 1rem;
+      right: 1.8rem;
+      font-size: 4rem;
+      text-shadow: 1px 1px 5px black; }
+    header .navbar nav {
+      display: none; }
 
 main {
   width: 100vh;
   background-color: #CCC;
   margin-top: 100vh; }
 
+@media (min-width: 380px) and (orientation: portrait) {
+  header .text-header {
+    padding: 0 3rem; }
+    header .text-header h1 {
+      font-size: 4.5rem; }
+    header .text-header h3 {
+      font-size: 2rem;
+      line-height: 2.3rem; }
+  header #arrow {
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #FFF;
+    font-size: 4.8rem; } }
+@media (min-width: 530px) and (orientation: landscape) {
+  header .text-header {
+    padding: 0 5rem; } }
+@media (min-width: 530px) and (orientation: portrait) {
+  header .text-header {
+    padding: 0 4rem; }
+    header .text-header h1 {
+      font-size: 5.5rem; }
+    header .text-header h3 {
+      font-size: 3rem;
+      line-height: 3.3rem; }
+  header #arrow {
+    bottom: 4.5rem;
+    width: 65px;
+    height: 65px;
+    border: 4px solid #FFF;
+    font-size: 6.3rem; }
+  header .navbar img {
+    max-height: 5.5rem;
+    top: 2vh;
+    left: 3vh; }
+  header .navbar #menu-bar {
+    top: 2rem;
+    right: 2.5rem;
+    font-size: 5rem; } }
+@media (min-width: 730px) and (orientation: landscape) {
+  header .text-header {
+    padding: 0 7.5rem; }
+    header .text-header h1 {
+      font-size: 4.5rem; }
+    header .text-header h3 {
+      font-size: 2rem;
+      line-height: 2.3rem; }
+  header #arrow {
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #FFF;
+    font-size: 4.8rem; } }
+@media (min-width: 768px) {
+  header .text-header {
+    padding: 0 7rem; }
+    header .text-header h1 {
+      font-size: 6.5rem; }
+    header .text-header h3 {
+      margin-top: 2rem;
+      font-size: 3.8rem;
+      line-height: 4.3rem; } }
 @keyframes arrow {
   0% {
     transform: translateY(-60px); }

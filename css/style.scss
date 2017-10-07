@@ -15,20 +15,20 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  color: white;
+  color: $color1;
   #arrow {
     position: absolute;
     bottom: 1.5rem;
     left: 50%;
     width: 40px;
     height: 40px;
-    border: 3px solid white;
+    border: 3px solid $color1;
     border-radius: 100%;
     font-size: 3.8rem;
     text-align: center;
     transform: translateX(-50%);
     overflow-y: hidden;
-    text-shadow: 0 -12px 0 white, 0 -24px 0 white;
+    text-shadow: 0 -12px 0 $color1, 0 -24px 0 $color1;
     box-shadow: $shadowBlack;
     background-color: rgba(0, 0, 0, .35);
   }
@@ -36,50 +36,159 @@ header {
     animation: arrow 1.6s infinite linear;
   }
   .text-header {
-    margin: 16% 3rem;
+    position: absolute;
+    top: 30%;
+    padding: 0 2rem;
     text-shadow: $shadowBlack;
-    font-family: $secondary-font;
     text-align: center;
     h1 {
       font-size: 4rem;
+      font-family: $secondary-font;
     }
     h3 {
       font-size: 1.5rem;
       margin-top: 1.2rem;
       line-height: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: .1rem;
+      word-spacing: .2rem;
     }
   }
+  .navbar {
+    height: 10vh;
+    img {
+      max-height: 4.5rem;
+      max-width: 50%;
+      position: absolute;
+      top: 2vh;
+      left: 2vh;
+      filter: drop-shadow(1px 1px 2px #000);
+    }
+    #menu-bar {
+      position: absolute;
+      top: 1rem;
+      right: 1.8rem;
+      font-size: 4rem;
+      text-shadow: $shadowBlack;
+    }
+    nav {
+      display: none;
+    }
+  } // koniec - header
 }
-
-.navbar {
-  position: relative;
-  height: 10vh;
-  img {
-    max-height: 4rem;
-    max-width: 50%;
-    position: absolute;
-    top: 1vh;
-    left: 1vh;
-    filter: drop-shadow(1px 1px 2px #000);
-  }
-  #menu-bar {
-    position: absolute;
-    top: .8rem;
-    right: 1.3rem;
-    font-size: 3rem;
-    text-shadow: $shadowBlack;
-  }
-  nav {
-    display: none;
-  }
-}
-
 
 main {
   width: 100vh;
   background-color: #CCC;
   margin-top: 100vh;
 }
+
+@media #{$mobile} {
+  header {
+    .text-header {
+      padding: 0 3rem;
+      h1 {
+        font-size: 4.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2.3rem;
+      }
+    }
+    #arrow {
+      bottom: 2rem;
+      width: 50px;
+      height: 50px;
+      border: 3px solid $color1;
+      font-size: 4.8rem;
+    }
+  }
+}
+
+@media #{$mobileLand} {
+  header {
+    .text-header {
+      padding: 0 5rem;
+    }
+  }
+}
+
+@media #{$LMobile} {
+  header {
+    .text-header {
+      padding: 0 4rem;
+      h1 {
+        font-size: 5.5rem;
+      }
+      h3 {
+        font-size: 3rem;
+        line-height: 3.3rem;
+      }
+    }
+    #arrow {
+      bottom: 4.5rem;
+      width: 65px;
+      height: 65px;
+      border: 4px solid $color1;
+      font-size: 6.3rem;
+    }
+    .navbar {
+      img {
+        max-height: 5.5rem;
+        top: 2vh;
+        left: 3vh;
+      }
+      #menu-bar {
+        top: 2rem;
+        right: 2.5rem;
+        font-size: 5rem;
+      }
+    }
+  } // koniec - header
+}
+
+@media #{$LMobileLand} {
+  header {
+    .text-header {
+      padding: 0 7.5rem;
+      h1 {
+        font-size: 4.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2.3rem;
+      }
+    }
+    #arrow {
+      bottom: 2rem;
+      width: 50px;
+      height: 50px;
+      border: 3px solid $color1;
+      font-size: 4.8rem;
+    }
+  } // koniec - header
+}
+
+@media #{$tablet} {
+  header {
+    .text-header {
+      padding: 0 7rem;
+      h1 {
+        font-size: 6.5rem;
+      }
+      h3 {
+        margin-top: 2rem;
+        font-size: 3.8rem;
+        line-height: 4.3rem;
+      }
+    }
+  }
+}
+
+
+
+
 
 
 @keyframes arrow {
