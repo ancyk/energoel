@@ -28,7 +28,7 @@ header {
     text-align: center;
     transform: translateX(-50%);
     overflow-y: hidden;
-    text-shadow: 0 -12px 0 $color1, 0 -24px 0 $color1;
+    text-shadow: 0 -15px 0 $color1, 0 -30px 0 $color1;
     box-shadow: $shadowBlack;
     background-color: rgba(0, 0, 0, .35);
   }
@@ -178,11 +178,52 @@ main {
   html {
     font-size: 12px;
   }
+  #arrow {
+    cursor: pointer;
+  }
 }
 
-@media #{$LTablet} {}
+@media #{$LTablet} {
+  body,
+  html {
+    font-size: 16px;
+  }
+  header {
+    .text-header {
+      padding: 0 8rem;
+      h1 {
+        margin-bottom: 2rem;
+      }
+    }
+    #arrow {
+      width: 60px;
+      height: 60px;
+      border: 3px solid $color1;
 
-@media #{$desktop} {}
+    }
+    .navbar {
+      nav {
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+      }
+    }
+  }
+}
+
+@media #{$desktop} {
+  body,
+  html {
+    font-size: 18px;
+  }
+}
 
 @media #{$LDesktop} {}
 
