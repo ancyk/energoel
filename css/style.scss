@@ -71,8 +71,29 @@ header {
       right: 1.8rem;
       font-size: 4rem;
       text-shadow: $shadowBlack;
+      z-index: 11;
     }
     nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba($color1, 0.85);
+      text-transform: uppercase;
+      ul {
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 10rem;
+        line-height: 6rem;
+        li a {
+          text-decoration: none;
+          color: rgba($color2, 0.8);
+          font-weight: 500;
+          width: 100%;
+        }
+      }
       display: none;
     }
   } // koniec - header
@@ -80,111 +101,90 @@ header {
 
 main {
   width: 100vh;
-  background-color: #CCC;
   margin-top: 100vh;
 }
 
-@media #{$mobile} {
-  header {
-    .text-header {
-      padding: 0 3rem;
-      h1 {
-        font-size: 4.5rem;
-      }
-      h3 {
-        font-size: 2rem;
-        line-height: 2.3rem;
-      }
-    }
-    #arrow {
-      bottom: 2rem;
-      width: 50px;
-      height: 50px;
-      border: 3px solid $color1;
-      font-size: 4.8rem;
-    }
+@media (orientation: landscape) {
+  body,
+  html {
+    font-size: 8px;
+  }
+  header .navbar nav ul {
+    margin-top: 4.5rem;
   }
 }
 
+@media #{$mobile} {
+  body,
+  html {
+    font-size: 12px;
+  }
+  header .text-header {
+    padding: 0 4rem;
+  }
+  #arrow {
+    width: 50px;
+    height: 50px;
+    border: 3px solid $color1;
+  }
+
+}
+
 @media #{$mobileLand} {
-  header {
-    .text-header {
-      padding: 0 5rem;
-    }
+  body,
+  html {
+    font-size: 10px;
   }
 }
 
 @media #{$LMobile} {
+  body,
+  html {
+    font-size: 14px;
+  }
   header {
-    .text-header {
-      padding: 0 4rem;
-      h1 {
-        font-size: 5.5rem;
-      }
-      h3 {
-        font-size: 3rem;
-        line-height: 3.3rem;
-      }
-    }
     #arrow {
-      bottom: 4.5rem;
       width: 65px;
       height: 65px;
       border: 4px solid $color1;
-      font-size: 6.3rem;
     }
     .navbar {
       img {
-        max-height: 5.5rem;
         top: 2vh;
         left: 3vh;
-      }
-      #menu-bar {
-        top: 2rem;
-        right: 2.5rem;
-        font-size: 5rem;
       }
     }
   } // koniec - header
 }
 
 @media #{$LMobileLand} {
-  header {
-    .text-header {
-      padding: 0 7.5rem;
-      h1 {
-        font-size: 4.5rem;
-      }
-      h3 {
-        font-size: 2rem;
-        line-height: 2.3rem;
-      }
-    }
-    #arrow {
-      bottom: 2rem;
-      width: 50px;
-      height: 50px;
-      border: 3px solid $color1;
-      font-size: 4.8rem;
-    }
-  } // koniec - header
+  body,
+  html {
+    font-size: 11px;
+  }
+  header .text-header {
+    padding: 0 5rem;
+  }
+  #arrow {
+    width: 50px;
+    height: 50px;
+    border: 3px solid $color1;
+  }
+
 }
 
 @media #{$tablet} {
-  header {
-    .text-header {
-      padding: 0 7rem;
-      h1 {
-        font-size: 6.5rem;
-      }
-      h3 {
-        margin-top: 2rem;
-        font-size: 3.8rem;
-        line-height: 4.3rem;
-      }
-    }
+  body,
+  html {
+    font-size: 12px;
   }
 }
+
+@media #{$LTablet} {}
+
+@media #{$desktop} {}
+
+@media #{$LDesktop} {}
 
 
 
