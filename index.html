@@ -12,28 +12,36 @@
 </head>
 
 <body>
-  <header>
-    <div class="navbar">
-      <img src="img/logo.svg">
-      <div id="menu-bar"><i class="fa fa-bars" aria-hidden="true"></i></div>
-      <nav>
-        <ul id="menu-top">
-          <li><a href="#">O firmie</a></li>
-          <li><a href="#">Oferta</a></li>
-          <li><a href="#">Produkty</a></li>
-          <li><a href="#">Nagrody</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
+  <header class="bg bg-header">
+    <div class="navbar scroll-menu">
+      <div class="top-nav">
+        <img src="img/logo.svg">
+        <div id="menu-bar"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      </div>
+      <nav id="top-menu">
+          <a href="#ofirmie"><div>O firmie</div></a>
+          <a href="#oferta"><div>Oferta</div></a>
+          <a href="#produkty"><div>Produkty</div></a>
+          <a href="#nagrody" class="current"><div>Nagrody</div></a>
+          <a href="#kontakt"><div>Kontakt</div></a>
       </nav>
     </div>
     <div class="text-header">
-      <h1>EnergoEl</h1>
-      <h3>Grzejnictwo indukcyjne, nagrzewnice indukcyjne, piece indukcyjne, zasilacze impulsowe, energoelektronika</h3>
+      <h1>EnergoEl<br><span>Grzejnictwo indukcyjne, nagrzewnice indukcyjne, piece <br>indukcyjne, zasilacze impulsowe, energoelektronika</span></h1>
     </div>
     <div id="arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
   </header>
-
-  <main></main>
+  <main>
+    <article id="ofirmie"></article>
+    <section class="bg bg2"></section>
+    <article id="oferta"></article>
+    <section class="bg bg3"></section>
+    <article id="produkty"></article>
+    <section class="bg bg4"></section>
+    <article id="nagrody"></article>
+    <section class="bg bg5"></section>
+    <article id="kontakt"></article>
+  </main>
   <footer></footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
