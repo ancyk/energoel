@@ -1,24 +1,14 @@
 // czcionki
-$primary-font: 'Quicksand',
-sans-serif;
-$secondary-font: 'Alfa Slab One',
-cursive;
+$pri-font: 'Quicksand', sans-serif;
+$sec-font: 'Alfa Slab One', cursive;
 
 // cienie
-$shadowBlack: 1px 1px 5px black;
+$shadow: 1px 1px 5px #000;
 
 // kolory
-$color1: #EFEFEF;
-$color2: #222421;
+$white: #ECECEC;
+$gray: #1A1C1B;
+$green: #1D9A4E;
 
-
-// urządzenia
-$mobile: "(min-width: 380px) and (orientation: portrait)";
-$mobileLand: "(min-width: 580px) and (orientation: landscape)";
-$LMobile: "(min-width: 530px) and (orientation: portrait)";
-$LMobileLand: "(min-width: 730px) and (orientation: landscape)";
-
-$tablet: "(min-width: 768px)";
-$LTablet: "(min-width: 1024px)";
-$desktop: "(min-width: 1280px)";
-$LDesktop: "(min-width: 1600px)";
+// przejście
+$transition: all 500ms ease-out 1ms;
