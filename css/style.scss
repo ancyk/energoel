@@ -50,10 +50,10 @@ html, body {
   font-size: 2.3rem;
 }
 #top-menu { 
-  display: none; //none-block
+  display: block;
   width: 100%;
   text-align: center;
-  background-color: $white;
+  background-color: rgba($white, .95);
   border-bottom: 2px solid $gray;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -116,13 +116,91 @@ html, body {
   }
 }
 
+article {
+  padding: 4rem 1.5rem;
+  text-align: justify;
+  h1, h3 {
+    text-align: center;
+    color: $green;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-shadow: $shadow;
+  }
+  h1 { font-size: 2.7rem; }
+  h3 { font-size: 1.7rem; }
+  p {
+    margin-top: 1rem;
+  }
+}
+.styled-list {
+  padding-top: .7rem;
+  li { padding-left: 1.3rem; }
+  li:before {
+    content: "\f058";
+    font-family: FontAwesome;
+    color: $green;
+    display: inline-block;
+    margin-left: -1.3rem;
+    width: 1.3rem;
+  }
+}
+.btn {
+  background-color: $green;
+  font-family: $pri-font;
+  font-size: 1rem; 
+  color: $white;
+  border: none;
+  display: table;
+  width: 100%;
+  border-radius: .5rem;
+  padding: .7rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  &:hover {background-color: lighten($green, 5);}
+}
+hr {
+  background-color: $green;
+  margin-top: 1rem;
+}
+.methods {
+  h6 {
+    color: $green;
+    text-align: center;
+    text-shadow: $shadow;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+
 @media (orientation: landscape) { 
   .text-header h1 span br { display: inline-block; }
   .navbar { height: 15vh; }
 }
 
+@media (max-height: 440px) and (orientation: landscape) {
+  #top-menu {
+    a {
+      font-size: 1.3rem;
+      div { padding: .5rem; }
+    }
+  }
+}
+
+@media (min-width: 380px) {
+  html, body { font-size: 16px; }
+}
+
 @media (min-width: 600px) and (orientation: portrait) {
   html, body { font-size: 16px; }
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+  article { padding: 4rem 3rem; }
+  .btn { width: 70%; }
 }
 
 @media (min-width: 768px) {
@@ -130,7 +208,7 @@ html, body {
   html, body { font-size: 16px; }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   html, body { font-size: 17px; }
   .text-header h1 { font-size: 4rem; }
   .top-nav img { filter: drop-shadow(1px 1px 3px #000); }
@@ -143,6 +221,7 @@ html, body {
     width: 55px;
     height: 55px;
     font-size: 3.3rem;
+    cursor: pointer;
     text-shadow: 0 -15px 0 $white, 0 -30px 0 $white;
   }
   #top-menu {
@@ -156,15 +235,15 @@ html, body {
     background-color: transparent;
     border: none;
     letter-spacing: 0;
+    &:last-child { margin-right: 1rem; }
     a {
       color: $white;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 400;
       transition: $transition;
       box-sizing: border-box;
       &:hover {
         color: $green;
-        border-bottom: 10px solid $green;
       }
       div {
         border: none;
@@ -182,13 +261,40 @@ html, body {
     height: 70px;
   }
   .scroll-menu #top-menu {
-    a div {
-      text-shadow: none;
-      padding-top: 1.4rem;
+    &:last-child { margin-right: 0; }
+    a {
+      font-size: 1.2rem;
+      &:hover {
+        border-bottom: 10px solid $green;
+      }
+      div {
+        text-shadow: none;
+        padding-top: 1.4rem;
+      }
+    } 
+  }
+  
+  article { padding: 4rem 11rem; }
+  .methods {
+    h6 {
+      font-size: 1.5rem;
+    }
+    hr { margin-top: 2rem; }
+    .methods-flex {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      div {
+        width: 48%;
+        .hidden-text {
+          width: 100%;
+          p { text-align: justify; }
+        }
+        .btn { width: 100%; }
+      }
     }
   }
 }
-
 
 
 
