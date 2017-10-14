@@ -147,6 +147,9 @@ article {
     margin-left: -1.3rem;
     width: 1.3rem; }
 
+.list-flex > .styled-list + .styled-list {
+  padding-top: 0; }
+
 .btn {
   background-color: #1D9A4E;
   font-family: "Quicksand", sans-serif;
@@ -174,6 +177,14 @@ hr {
   font-size: 1.1rem;
   font-weight: 300;
   text-transform: uppercase; }
+
+figure {
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 350px; }
+  figure img {
+    border-radius: .5rem; }
 
 @media (orientation: landscape) {
   .text-header h1 span br {
@@ -278,6 +289,9 @@ hr {
   article {
     padding: 4rem 11rem; }
 
+  article#nagrody {
+    padding: 4rem 3rem; }
+
   .list-flex {
     display: flex;
     flex-flow: row wrap;
@@ -293,7 +307,10 @@ hr {
     .methods div .hidden-text p {
       text-align: justify; }
   .methods .half .btn {
-    width: 100%; } }
+    width: 100%; }
+
+  .list-flex > .styled-list + .styled-list {
+    padding-top: .7rem; } }
 @keyframes arrow {
   0% {
     transform: translateY(-50px); }

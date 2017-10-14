@@ -145,6 +145,9 @@ article {
     width: 1.3rem;
   }
 }
+.list-flex > .styled-list + .styled-list {
+  padding-top: 0;
+}
 .btn {
   background-color: $green;
   font-family: $pri-font;
@@ -173,6 +176,14 @@ hr {
     font-weight: 300;
     text-transform: uppercase;
   }
+}
+
+figure {
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 350px;
+  img { border-radius: .5rem; }
 }
 
 
@@ -275,6 +286,7 @@ hr {
   }
   hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
+  article#nagrody { padding: 4rem 3rem; }
   .list-flex {
       display: flex;
       flex-flow: row wrap;
@@ -288,6 +300,9 @@ hr {
       p { text-align: justify; }
     }
     .half .btn { width: 100%; }
+  }
+  .list-flex > .styled-list + .styled-list {
+    padding-top: .7rem;
   }
 }
 
