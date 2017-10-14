@@ -170,7 +170,7 @@ hr {
   background-color: #1D9A4E;
   margin-top: 1rem; }
 
-.methods h6 {
+h6 {
   color: #1D9A4E;
   text-align: center;
   text-shadow: 1px 1px 3px #000;
@@ -182,9 +182,66 @@ figure {
   text-align: center;
   margin: auto;
   margin-top: 1.5rem;
-  width: 350px; }
+  width: 100%; }
   figure img {
     border-radius: .5rem; }
+
+#kontakt p {
+  margin-top: 0; }
+#kontakt i {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  margin-right: 1rem;
+  color: #1D9A4E; }
+
+.contact-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.half-contact-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: .5rem; }
+
+.contact-flex-column {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.contact-items {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: .25rem; }
+
+.bank {
+  margin: 1rem .5rem;
+  text-align: center; }
+  .bank .contact-items {
+    justify-content: center; }
+
+footer {
+  background-color: #1D9A4E;
+  color: #ECECEC;
+  padding: 2rem 1rem; }
+  footer #footer-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    footer #footer-menu a {
+      color: #ECECEC;
+      margin: 0 .25rem; }
+      footer #footer-menu a div {
+        display: inline-block;
+        padding: .7rem;
+        border-radius: .7rem;
+        transition: all 500ms ease-out 1ms; }
+        footer #footer-menu a div:hover {
+          color: #1D9A4E;
+          background-color: rgba(236, 236, 236, 0.8); }
 
 @media (orientation: landscape) {
   .text-header h1 span br {
@@ -199,7 +256,10 @@ figure {
       padding: .5rem; } }
 @media (min-width: 380px) {
   html, body {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  figure {
+    width: 350px; } }
 @media (min-width: 600px) and (orientation: portrait) {
   html, body {
     font-size: 16px; } }

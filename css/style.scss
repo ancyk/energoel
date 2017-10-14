@@ -167,23 +167,85 @@ hr {
   background-color: $green;
   margin-top: 1rem;
 }
-.methods {
-  h6 {
-    color: $green;
-    text-align: center;
-    text-shadow: $shadow;
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
+
+h6 {
+  color: $green;
+  text-align: center;
+  text-shadow: $shadow;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 figure {
   text-align: center;
   margin: auto;
   margin-top: 1.5rem;
-  width: 350px;
+  width: 100%;
   img { border-radius: .5rem; }
+}
+
+#kontakt {
+  p {margin-top: 0;}
+  i {
+    font-size: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    margin-right: 1rem;
+    color: $green;
+  }
+}
+.contact-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.half-contact-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: .5rem;
+}
+.contact-flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.contact-items {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: .25rem;
+}
+.bank {
+  margin: 1rem .5rem;
+  text-align: center;
+  .contact-items { justify-content: center; }
+}
+
+footer {
+  background-color: $green;
+  color: $white;
+  padding: 2rem 1rem;
+  #footer-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    a {
+      color: $white;
+      margin: 0 .25rem;
+      div {
+        display: inline-block;
+        padding: .7rem;
+        border-radius: .7rem;
+        transition: $transition;
+        &:hover {
+          color: $green;
+          background-color: rgba($white, .8); 
+        }
+      }
+    }
+  }
 }
 
 
@@ -203,6 +265,7 @@ figure {
 
 @media (min-width: 380px) {
   html, body { font-size: 16px; }
+  figure { width: 350px; }
 }
 
 @media (min-width: 600px) and (orientation: portrait) {
