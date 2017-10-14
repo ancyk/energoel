@@ -273,26 +273,21 @@ hr {
       }
     } 
   }
-  
+  hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
-  .methods {
-    h6 {
-      font-size: 1.5rem;
-    }
-    hr { margin-top: 2rem; }
-    .methods-flex {
+  .list-flex {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      div {
-        width: 48%;
-        .hidden-text {
-          width: 100%;
-          p { text-align: justify; }
-        }
-        .btn { width: 100%; }
-      }
+  }
+  .half { width: 48%; }
+  .methods {
+    h6 { font-size: 1.5rem; }
+    div .hidden-text {
+      width: 100%;
+      p { text-align: justify; }
     }
+    .half .btn { width: 100%; }
   }
 }
 

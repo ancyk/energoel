@@ -272,25 +272,28 @@ hr {
       text-shadow: none;
       padding-top: 1.4rem; }
 
+  hr {
+    margin-top: 2rem; }
+
   article {
     padding: 4rem 11rem; }
 
-  .methods h6 {
-    font-size: 1.5rem; }
-  .methods hr {
-    margin-top: 2rem; }
-  .methods .methods-flex {
+  .list-flex {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
-    .methods .methods-flex div {
-      width: 48%; }
-      .methods .methods-flex div .hidden-text {
-        width: 100%; }
-        .methods .methods-flex div .hidden-text p {
-          text-align: justify; }
-      .methods .methods-flex div .btn {
-        width: 100%; } }
+
+  .half {
+    width: 48%; }
+
+  .methods h6 {
+    font-size: 1.5rem; }
+  .methods div .hidden-text {
+    width: 100%; }
+    .methods div .hidden-text p {
+      text-align: justify; }
+  .methods .half .btn {
+    width: 100%; } }
 @keyframes arrow {
   0% {
     transform: translateY(-50px); }
