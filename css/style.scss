@@ -251,6 +251,11 @@ footer {
   }
 }
 
+.products figure {
+  width: 100%;
+  max-width: 600px;
+}
+
 
 @media (orientation: landscape) { 
   .text-header h1 span br { display: inline-block; }
@@ -352,7 +357,7 @@ footer {
   }
   hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
-  article#nagrody { padding: 4rem 3rem; }
+  article#nagrody, article#produkty { padding: 4rem 3rem; }
   .list-flex {
       display: flex;
       flex-flow: row wrap;

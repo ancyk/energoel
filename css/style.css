@@ -244,6 +244,10 @@ footer {
           color: #1D9A4E;
           background-color: rgba(236, 236, 236, 0.8); }
 
+.products figure {
+  width: 100%;
+  max-width: 600px; }
+
 @media (orientation: landscape) {
   .text-header h1 span br {
     display: inline-block; }
@@ -350,7 +354,7 @@ footer {
   article {
     padding: 4rem 11rem; }
 
-  article#nagrody {
+  article#nagrody, article#produkty {
     padding: 4rem 3rem; }
 
   .list-flex {
