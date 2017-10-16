@@ -184,7 +184,8 @@ figure {
   margin-top: 1.5rem;
   width: 100%; }
   figure img {
-    border-radius: .5rem; }
+    border-radius: .5rem;
+    max-width: 100%; }
 
 #kontakt p {
   margin-top: 0; }

@@ -1,8 +1,16 @@
 (function(){
   var $window = $(window);
   var $topMenu = $('#top-menu');
+  var $showMobile = $('#show-mobile');
+  var $hideMobile = $('#hide-mobile');
+  var $hiddenTextMobile = $('.hidden-text-mobile');
   var nr;
   
+  
+  // ukrycie tekstu oraz przycisków
+  $('.hidden-text').hide(); 
+  $showMobile.hide();
+  $hideMobile.hide();
   
   // ukrycie lub pokazanie menu w zależności
   // od szerokości okna przeglądarki
@@ -17,14 +25,38 @@
     } 
   }
   
+  function offerShow() {
+    if ($window.outerWidth(true) < 900) {
+      $showMobile.show();
+      $hiddenTextMobile.hide();
+      $showMobile.on('click', function(e){
+        e.preventDefault();
+        $hiddenTextMobile.slideDown();
+        $showMobile.hide();
+        $hideMobile.show();
+      });
+      $hideMobile.on('click', function(e) {
+        e.preventDefault();
+        $hiddenTextMobile.slideUp();
+        $showMobile.show();
+        $('html, body').animate({
+          scrollTop: $showMobile.offset().top - 100
+        });
+      });
+    } else {
+      $showMobile.hide();
+      $hideMobile.hide();
+      $hiddenTextMobile.show();
+    }
+  }
+  
   changeMenuDevice();
-  
-  // ukrycie tekstu
-  $('.hidden-text').hide();
-  
+  offerShow(); 
+
   // reakcja na zmianę rozmiaru okna
   $window.on('resize', function() {
     changeMenuDevice();
+    offerShow();
   });
   
   // rozwijanie/zwijanie menu mobilnego
@@ -57,7 +89,7 @@
     $('.hidden1').slideUp();
     $('html, body').animate({
       scrollTop: $('#show1').offset().top - 100
-    }, 500, 'swing')
+    }, 500, 'swing');
   });
   
 })();
