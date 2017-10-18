@@ -36,6 +36,7 @@ html, body {
 
 .navbar {
   height: 10vh;
+  max-height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -74,7 +75,7 @@ html, body {
 
 .text-header {
   text-align: center;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 1px 1px 1px #000;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -113,7 +114,7 @@ html, body {
   font-size: 2.5rem;
   text-shadow: 0 -12px 0 #ECECEC, 0 -24px 0 #ECECEC;
   overflow: hidden;
-  box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 1px #000;
   background: rgba(29, 154, 78, 0.5); }
   #arrow .fa-angle-down {
     animation: arrow 1.5s infinite linear; }
@@ -127,7 +128,7 @@ article {
     text-transform: uppercase;
     font-weight: 400;
     margin-top: 1rem;
-    text-shadow: 1px 1px 3px #000; }
+    text-shadow: 1px 1px 1px #000; }
   article h1 {
     font-size: 2.7rem; }
   article h3 {
@@ -173,7 +174,7 @@ hr {
 h6 {
   color: #1D9A4E;
   text-align: center;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 1px 1px 1px #000;
   font-size: 1.1rem;
   font-weight: 300;
   text-transform: uppercase; }
@@ -186,6 +187,12 @@ figure {
   figure img {
     border-radius: .5rem;
     max-width: 100%; }
+
+.hidden-text > img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 1.5rem; }
 
 #kontakt p {
   margin-top: 0; }
@@ -217,6 +224,8 @@ figure {
   align-items: center;
   justify-content: flex-start;
   padding: .25rem; }
+  .contact-items a {
+    color: #1A1C1B; }
 
 .bank {
   margin: 1rem .5rem;
@@ -227,22 +236,8 @@ figure {
 footer {
   background-color: #1D9A4E;
   color: #ECECEC;
-  padding: 2rem 1rem; }
-  footer #footer-menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
-    footer #footer-menu a {
-      color: #ECECEC;
-      margin: 0 .25rem; }
-      footer #footer-menu a div {
-        display: inline-block;
-        padding: .7rem;
-        border-radius: .7rem;
-        transition: all 500ms ease-out 1ms; }
-        footer #footer-menu a div:hover {
-          color: #1D9A4E;
-          background-color: rgba(236, 236, 236, 0.8); }
+  padding: 1rem 1rem;
+  text-align: center; }
 
 .products figure {
   width: 100%;
@@ -270,7 +265,11 @@ footer {
     font-size: 16px; }
 
   figure {
-    width: 350px; } }
+    width: 350px; }
+
+  .video-pre {
+    width: 100%;
+    max-width: 600px; } }
 @media (min-width: 600px) and (orientation: portrait) {
   html, body {
     font-size: 16px; } }
@@ -333,7 +332,7 @@ footer {
         color: #1D9A4E; }
       #top-menu a div {
         border: none;
-        text-shadow: 1px 1px 3px #000;
+        text-shadow: 1px 1px 1px #000;
         padding-top: 2.2rem; }
 
   .current {
@@ -341,7 +340,7 @@ footer {
     border-bottom: 10px solid #1D9A4E; }
 
   .scroll-menu {
-    background-color: rgba(26, 28, 27, 0.9);
+    background-color: #1a1c1b;
     height: 70px; }
 
   .scroll-menu #top-menu:last-child {
