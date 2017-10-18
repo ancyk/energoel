@@ -248,6 +248,12 @@ footer {
   width: 100%;
   max-width: 600px; }
 
+#produkty > p {
+  text-align: center; }
+
+#product-content {
+  margin-top: -3rem; }
+
 @media (orientation: landscape) {
   .text-header h1 span br {
     display: inline-block; }
@@ -375,7 +381,11 @@ footer {
     width: 100%; }
 
   .list-flex > .styled-list + .styled-list {
-    padding-top: .7rem; } }
+    padding-top: .7rem; }
+
+  .product-hover:hover {
+    filter: brightness(70%);
+    cursor: pointer; } }
 @keyframes arrow {
   0% {
     transform: translateY(-50px); }

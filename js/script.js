@@ -4,7 +4,7 @@
   var $showMobile = $('#show-mobile');
   var $hideMobile = $('#hide-mobile');
   var $hiddenTextMobile = $('.hidden-text-mobile');
-  var nr;
+  var nrOffer, nrProduct;
   
   
   // ukrycie tekstu oraz przycisków
@@ -50,8 +50,16 @@
     }
   }
   
+  function hideProducts(nr) {
+    for (var i = 1; i <= $('#product-content').children().length; i++) {
+      if (i != nr) $('#product' + i).hide();
+      else $('#product' + i).slideDown();
+    }
+  }
+  
   changeMenuDevice();
   offerShow(); 
+  hideProducts();
 
   // reakcja na zmianę rozmiaru okna
   $window.on('resize', function() {
@@ -79,8 +87,8 @@
   // rozwijanie dalszej części tekstu
   $('button').on('click', function(e) {
     e.preventDefault();
-    nr = (this.id).substring(4,5);
-    $('.hidden' + nr).slideToggle();
+    nrOffer = (this.id).substring(4,5);
+    $('.hidden' + nrOffer).slideToggle();
   });
   
   // przejście do góry po kliknięciu
@@ -90,6 +98,12 @@
     $('html, body').animate({
       scrollTop: $('#show1').offset().top - 100
     }, 500, 'swing');
+  });
+  
+  // pokazywanie opisu produktu
+  $('.product-hover').on('click', function() {
+    nrProduct = parseInt((this.id).slice(-1));
+    hideProducts(nrProduct);
   });
   
 })();
