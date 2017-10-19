@@ -36,7 +36,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: $gray;
+  background-color: rgba($gray, .95);
 }
 .top-nav {
   display: flex;
@@ -44,7 +44,10 @@ html, body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  img { height: 100%; }
+  img {
+    height: 100%;
+    padding-left: .5rem;
+  }
 }
 #menu-bar {
   margin-right: 1rem;
@@ -132,6 +135,8 @@ article {
   h3 { font-size: 1.7rem; }
   p { margin-top: 1rem; }
 }
+article#oferta { padding-bottom: 0; }
+article#nagrody { padding-top: 0; }
 .styled-list {
   padding-top: .7rem;
   li { padding-left: 1.3rem; }
@@ -276,6 +281,7 @@ footer {
 
 @media (min-width: 600px) and (orientation: landscape) {
   article { padding: 4rem 3rem; }
+  article#oferta {padding-bottom: 0; }
   .btn { width: 70%; }
 }
 
@@ -287,7 +293,6 @@ footer {
 @media (min-width: 900px) {
   html, body { font-size: 17px; }
   .text-header h1 { font-size: 4rem; }
-  .top-nav img { filter: drop-shadow(1px 1px 3px #000); }
   #menu-bar { display: none; }
   .navbar {
     background-color: transparent;
@@ -333,7 +338,7 @@ footer {
     border-bottom: 10px solid $green;
   }
   .scroll-menu {
-    background-color: rgba($gray, 1);
+    background-color: rgba($gray, .95);
     height: 70px;
   }
   .scroll-menu #top-menu {
@@ -351,7 +356,9 @@ footer {
   }
   hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
-  article#nagrody, article#produkty { padding: 4rem 3rem; }
+  article#produkty, article#nagrody { padding: 4rem 3rem; }
+  article#nagrody { padding-top: 0; }
+  article#oferta { padding-bottom: 0; }
   .list-flex {
       display: flex;
       flex-flow: row wrap;
