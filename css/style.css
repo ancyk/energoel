@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Bauhaus;
+  src: url(../fonts/Bauhaus93.ttf); }
 * {
   padding: 0;
   margin: 0;
@@ -27,6 +30,9 @@ html, body {
 
 .bg5 {
   background-image: url("../img/bg/05.jpg"); }
+
+.bg6 {
+  background-image: url("../img/bg/06.jpg"); }
 
 .bg-header {
   background-image: url("../img/bg/01.jpg");
@@ -88,19 +94,23 @@ html, body {
   padding: 1rem;
   box-sizing: border-box; }
   .text-header h1 {
-    font-family: "Alfa Slab One", cursive;
+    font-family: "Bauhaus", cursive;
     font-size: 3.5rem;
-    letter-spacing: 2px;
     font-weight: 100; }
-    .text-header h1 span {
+    .text-header h1 .header-min {
       display: block;
       font-family: "Quicksand", sans-serif;
       text-transform: uppercase;
       font-size: .35em;
       font-weight: 500;
       letter-spacing: 0; }
-      .text-header h1 span br {
+      .text-header h1 .header-min br {
         display: none; }
+    .text-header h1 .green {
+      font-style: inherit;
+      font-size: inherit;
+      color: #32FF32;
+      display: inline-block; }
 
 #arrow {
   position: absolute;
@@ -137,10 +147,10 @@ article {
   article p {
     margin-top: 1rem; }
 
-article#oferta {
+article#produkty {
   padding-bottom: 0; }
 
-article#nagrody {
+article#produkty + article {
   padding-top: 0; }
 
 .styled-list {
@@ -253,11 +263,8 @@ footer {
 #produkty > p {
   text-align: center; }
 
-#product-content {
-  margin-top: -3rem; }
-
 @media (orientation: landscape) {
-  .text-header h1 span br {
+  .text-header h1 .header-min br {
     display: inline-block; }
 
   .navbar {
@@ -283,9 +290,6 @@ footer {
 @media (min-width: 600px) and (orientation: landscape) {
   article {
     padding: 4rem 3rem; }
-
-  article#oferta {
-    padding-bottom: 0; }
 
   .btn {
     width: 70%; } }
@@ -368,12 +372,6 @@ footer {
 
   article#produkty, article#nagrody {
     padding: 4rem 3rem; }
-
-  article#nagrody {
-    padding-top: 0; }
-
-  article#oferta {
-    padding-bottom: 0; }
 
   .list-flex {
     display: flex;

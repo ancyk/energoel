@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+@font-face {
+   font-family: Bauhaus;
+   src: url(../fonts/Bauhaus93.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,6 +27,7 @@ html, body {
 .bg3 { background-image: url('../img/bg/03.jpg'); }
 .bg4 { background-image: url('../img/bg/04.jpg'); }
 .bg5 { background-image: url('../img/bg/05.jpg'); }
+.bg6 { background-image: url('../img/bg/06.jpg'); }
 .bg-header {
   background-image: url('../img/bg/01.jpg');
   height: 100vh;
@@ -87,9 +93,8 @@ html, body {
   h1 {
     font-family: $sec-font;
     font-size: 3.5rem;
-    letter-spacing: 2px;
     font-weight: 100;
-    span {
+    .header-min {
       display: block;
       font-family: $pri-font;
       text-transform: uppercase;
@@ -98,8 +103,15 @@ html, body {
       letter-spacing: 0;
       br { display: none; }
     }
+    .green {
+      font-style: inherit;
+      font-size: inherit;
+      color: #32FF32;
+      display: inline-block;
+    }
   }
 }
+
 #arrow {
   position: absolute;
   bottom: 2rem;
@@ -135,8 +147,10 @@ article {
   h3 { font-size: 1.7rem; }
   p { margin-top: 1rem; }
 }
-article#oferta { padding-bottom: 0; }
-article#nagrody { padding-top: 0; }
+article#produkty { padding-bottom: 0; }
+article#produkty + article { padding-top: 0; }
+
+
 .styled-list {
   padding-top: .7rem;
   li { padding-left: 1.3rem; }
@@ -249,11 +263,11 @@ footer {
   max-width: 600px;
 }
 #produkty > p { text-align: center; }
-#product-content { margin-top: -3rem; }
+
 
 
 @media (orientation: landscape) { 
-  .text-header h1 span br { display: inline-block; }
+  .text-header h1 .header-min br { display: inline-block; }
   .navbar { height: 15vh; }
 }
 
@@ -281,7 +295,6 @@ footer {
 
 @media (min-width: 600px) and (orientation: landscape) {
   article { padding: 4rem 3rem; }
-  article#oferta {padding-bottom: 0; }
   .btn { width: 70%; }
 }
 
@@ -357,8 +370,6 @@ footer {
   hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
   article#produkty, article#nagrody { padding: 4rem 3rem; }
-  article#nagrody { padding-top: 0; }
-  article#oferta { padding-bottom: 0; }
   .list-flex {
       display: flex;
       flex-flow: row wrap;
