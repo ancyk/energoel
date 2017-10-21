@@ -17,7 +17,7 @@ html, body {
 }
 .bg {
   min-height: 300px;
-  max-height: 1200px;
+  max-height: 1000px;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-attachment: fixed;
@@ -52,7 +52,7 @@ html, body {
   height: 100%;
   img {
     height: 100%;
-    padding-left: .5rem;
+    
   }
 }
 #menu-bar {
@@ -150,7 +150,6 @@ article {
 article#produkty { padding-bottom: 0; }
 article#produkty + article { padding-top: 0; }
 
-
 .styled-list {
   padding-top: .7rem;
   li { padding-left: 1.3rem; }
@@ -180,6 +179,10 @@ article#produkty + article { padding-top: 0; }
   margin-top: 1rem;
   text-transform: uppercase;
   &:hover {background-color: lighten($green, 5);}
+}
+.btn-product {
+  max-width: 600px;
+  margin-top: 2rem;
 }
 hr {
   background-color: $green;
@@ -257,6 +260,7 @@ footer {
   color: $white;
   padding: 1rem 1rem;
   text-align: center;
+  font-size: .9rem;
 }
 .products figure {
   width: 100%;
@@ -309,7 +313,11 @@ footer {
   #menu-bar { display: none; }
   .navbar {
     background-color: transparent;
+    background-image: linear-gradient(rgba($white, .8) 0%, rgba($white, .5) 25%, rgba($white, .2) 45%, rgba($white, .1) 60%, transparent 100%);
+    max-height: 100px;
     height: 100px;
+    transition: $transition;
+    img { display: none; }
   }
   #arrow {
     width: 55px;
@@ -346,13 +354,25 @@ footer {
       }
     }
   }
+  .navbar:not(.scroll-menu) > #top-menu {
+    justify-content: center;
+    a { margin: 0 1rem; }
+    &:last-child { margin-right: 0; }
+  }
   .current {
     color: $green !important;
     border-bottom: 10px solid $green;
   }
   .scroll-menu {
+    background-image: none;
     background-color: rgba($gray, .95);
-    height: 70px;
+    max-height: 70px;
+    .top-nav img { 
+      display: block; 
+      z-index: 10;
+      cursor: pointer;
+      max-width: 242px;
+    }
   }
   .scroll-menu #top-menu {
     &:last-child { margin-right: 0; }
