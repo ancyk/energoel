@@ -46,9 +46,6 @@
       $hiddenTextMobile.slideUp();
       $showMobile.show();
       $hiddenTextMobile.removeClass('mobile');
-      $htmlBody.animate({
-        scrollTop: $showMobile.offset().top - 80
-      });
     });
   }
   
@@ -116,6 +113,7 @@
     zebatkiHr = document.querySelector('#zebatki > hr');
     zebatki.removeChild(zebatkiHr);
     document.querySelector('#show7 + .hidden7').appendChild(zebatki);
+    $productContent.prepend('<br><br>');
   }
   hideProducts();
 
@@ -192,7 +190,7 @@
     nrProduct = parseInt((this.id).slice(-1));
     hideProducts(nrProduct);
     $htmlBody.animate({
-      scrollTop: $('#product-content').offset().top - 80
+      scrollTop: $('#product' + nrProduct).offset().top - 80
     }, 500, 'swing');
   });
   
@@ -200,6 +198,9 @@
   $('.btn-product').on('click', function(e) {
     e.preventDefault();
     $productContent.slideUp();
+    $htmlBody.animate({
+      scrollTop: $('#produkty h1').offset().top - 80
+    }, 500, 'swing');
   });
   
   // efekt przejścia w menu
