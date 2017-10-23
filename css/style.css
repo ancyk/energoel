@@ -47,7 +47,7 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: rgba(26, 28, 27, 0.95); }
 
 .top-nav {
@@ -78,6 +78,29 @@ html, body {
     #top-menu a div {
       padding: .8rem;
       border-bottom: 1px solid #1A1C1B; }
+
+.menu-prod {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none; }
+  .menu-prod:last-child {
+    margin-right: 1rem; }
+  .menu-prod a {
+    color: #ECECEC;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: all 500ms ease-out 1ms;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .menu-prod a:hover {
+      color: #1D9A4E; }
+    .menu-prod a div {
+      border: none;
+      text-shadow: 1px 1px 1px #000; }
 
 .text-header {
   text-align: center;
@@ -146,11 +169,55 @@ article {
   article p {
     margin-top: 1rem; }
 
-article#produkty {
+article#produkty-lista {
   padding-bottom: 0; }
 
-article#produkty + article {
+article#produkty-lista + article {
   padding-top: 0; }
+
+.bg-product-1 {
+  background-image: url("../img/bg/001.png"); }
+
+.bg-product-2 {
+  background-image: url("../img/bg/002.jpg"); }
+
+.div-40 {
+  height: 40%;
+  position: relative;
+  z-index: 5;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #1D9A4E;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.div-60 {
+  height: 60%; }
+  .div-60 img {
+    height: 100%;
+    max-width: 100%;
+    display: table;
+    margin: auto; }
+
+.bg-product {
+  height: 250px;
+  max-width: 980px;
+  justify-content: center;
+  background-position: center;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  filter: brightness(90%); }
+  .bg-product:hover {
+    filter: brightness(110%); }
+  .bg-product p {
+    margin: 0;
+    color: #ECECEC;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px #000;
+    width: 100%; }
 
 .styled-list {
   padding-top: .7rem; }
@@ -264,7 +331,7 @@ footer {
   width: 100%;
   max-width: 600px; }
 
-#produkty > p {
+#produkty-lista > p {
   text-align: center; }
 
 @media (orientation: landscape) {
@@ -372,7 +439,7 @@ footer {
     max-height: 70px; }
     .scroll-menu .top-nav img {
       display: block;
-      z-index: 10;
+      z-index: 100;
       cursor: pointer;
       max-width: 242px; }
 
@@ -392,7 +459,7 @@ footer {
   article {
     padding: 4rem 11rem; }
 
-  article#produkty, article#nagrody {
+  article#produkty-lista, article#nagrody {
     padding: 4rem 3rem; }
 
   .list-flex {

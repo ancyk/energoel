@@ -41,7 +41,7 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: rgba($gray, .95);
 }
 .top-nav {
@@ -74,6 +74,31 @@ html, body {
     div { 
       padding: .8rem;
       border-bottom: 1px solid $gray;
+    }
+  }
+}
+.menu-prod {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  &:last-child { margin-right: 1rem; }
+  a {
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: $transition;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: $green;
+    }
+    div {
+      border: none;
+      text-shadow: $shadow;
     }
   }
 }
@@ -147,9 +172,50 @@ article {
   h3 { font-size: 1.7rem; }
   p { margin-top: 1rem; }
 }
-article#produkty { padding-bottom: 0; }
-article#produkty + article { padding-top: 0; }
-
+article#produkty-lista { padding-bottom: 0; }
+article#produkty-lista + article { padding-top: 0; }
+.bg-product-1 { background-image: url('../img/bg/001.png'); }
+.bg-product-2 { background-image: url('../img/bg/002.jpg'); }
+.div-40 {
+  height: 40%;
+  position: relative;
+  z-index: 5;
+  border-radius: 1rem 1rem 0 0;
+  background-color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-60 { 
+  height: 60%;
+  img {
+    height: 100%;
+    max-width: 100%;
+    display: table;
+    margin: auto;
+  }
+}
+.bg-product {
+  height: 250px;
+  max-width: 980px;
+  justify-content: center;
+  background-position: center;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  filter: brightness(90%);
+  &:hover { filter: brightness(110%); }
+  p {
+    margin: 0;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: $shadow;
+    width: 100%;
+    
+  }
+}
 .styled-list {
   padding-top: .7rem;
   li { padding-left: 1.3rem; }
@@ -178,7 +244,7 @@ article#produkty + article { padding-top: 0; }
   margin: 0 auto;
   margin-top: 1rem;
   text-transform: uppercase;
-  &:hover {background-color: lighten($green, 5);}
+  &:hover { background-color: lighten($green, 5); }
 }
 .btn-product {
   max-width: 600px;
@@ -266,7 +332,7 @@ footer {
   width: 100%;
   max-width: 600px;
 }
-#produkty > p { text-align: center; }
+#produkty-lista > p { text-align: center; }
 
 
 
@@ -369,7 +435,7 @@ footer {
     max-height: 70px;
     .top-nav img { 
       display: block; 
-      z-index: 10;
+      z-index: 100;
       cursor: pointer;
       max-width: 242px;
     }
@@ -389,7 +455,7 @@ footer {
   }
   hr { margin-top: 2rem; }
   article { padding: 4rem 11rem; }
-  article#produkty, article#nagrody { padding: 4rem 3rem; }
+  article#produkty-lista, article#nagrody { padding: 4rem 3rem; }
   .list-flex {
       display: flex;
       flex-flow: row wrap;
