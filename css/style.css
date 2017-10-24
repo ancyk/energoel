@@ -1,6 +1,7 @@
 @font-face {
-  font-family: Bauhaus;
-  src: url(../fonts/Bauhaus93.ttf); }
+  font-family: 'BAUHS93';
+  src: url("../fonts/BAUHS93.eot");
+  src: local("../fonts/BAUHS93"), url("../fonts/BAUHS93.woff") format("woff"), url("../fonts/BAUHS93.ttf") format("truetype"); }
 * {
   padding: 0;
   margin: 0;
@@ -60,6 +61,8 @@ html, body {
     height: 100%; }
 
 #menu-bar {
+  position: absolute;
+  right: 0;
   margin-right: 1rem;
   font-size: 2.3rem; }
 
@@ -116,7 +119,7 @@ html, body {
   padding: 1rem;
   box-sizing: border-box; }
   .text-header h1 {
-    font-family: "Bauhaus", cursive;
+    font-family: "BAUHS93";
     font-size: 3.5rem;
     font-weight: 100; }
     .text-header h1 .header-min {
