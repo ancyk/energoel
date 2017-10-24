@@ -6,6 +6,7 @@
   var $hideMobile = $('#hide-mobile');
   var $hiddenTextMobile = $('.hidden-text-mobile');
   var $images = $('.parallax');
+  var $logoImg = $('#logo');
   var nrOffer, menuSrc, $winScroll, $imgOffset, $imgHeight, zebatki, zebatkiHr;
   
   
@@ -49,10 +50,18 @@
   
   // zmiana stylu menu
   function changeMenuStyle() {
-    if ($winScroll >= 300)
+    if ($winScroll >= 300) {
       $('.navbar').addClass('scroll-menu');
-    else
+      if ($window.outerWidth(true) < 900) {
+        $logoImg.fadeIn(500);
+      }
+    }
+    else {
       $('.navbar').removeClass('scroll-menu');
+      if ($window.outerWidth(true) < 900) {
+        $logoImg.fadeOut(0);
+      }
+    }
   }
   
   // efekt parallax
@@ -61,7 +70,7 @@
       $imgOffset = $(this).offset().top;
       $imgHeight = $(this).height();
 
-      if ($window.width() < 780) {
+      if ($window.outerWidth(true) < 700) {
         $(this).css('backgroundSize', '250%');
       } else {
         $(this).css('backgroundSize', 'cover');
@@ -165,7 +174,7 @@
   });
   
   // przejście do góry strony
-  $('#logo').on('click', function() {
+  $logoImg.on('click', function() {
     $htmlBody.animate({
       scrollTop: 0
     }, 1500, 'swing');
