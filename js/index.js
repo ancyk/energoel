@@ -93,7 +93,7 @@
 
       if (($winScroll >= ($('.bg4').offset().top - 300)) && ($winScroll < ($('.bg5').offset().top - 300))) { $('a[href="#technologie"]').addClass('current'); } else { $('a[href="#technologie"]').removeClass('current'); }
 
-      if (($winScroll >= ($('.bg5').offset().top - 300)) && ($winScroll < $('footer').offset().top)) { $('a[href="#kontakt"]').addClass('current'); } else { $('a[href="#kontakt"]').removeClass('current'); }
+      if (($winScroll >= ($('.bg6').offset().top - 300)) && ($winScroll < $('footer').offset().top)) { $('a[href="#kontakt"]').addClass('current'); } else { $('a[href="#kontakt"]').removeClass('current'); }
     } else {
       $('.top-menu a').each(function() {
         $(this).removeClass('current');
